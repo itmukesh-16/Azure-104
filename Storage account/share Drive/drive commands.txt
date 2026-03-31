@@ -1,0 +1,23 @@
+The net use command is a classic Windows command used to map, manage, and remove network drives
+
+🔹 What net use does
+
+->Connects your PC to a shared folder (local network or cloud like Azure)
+
+->Assigns it a drive letter (like M:, Z:)
+
+->Lets you access it via File Explorer
+
+map your network driv 
+net use M: \\demostorage1898.file.core.windows.net\on-prem-data /user:localhost\demostorage1898 YOUR_KEY 
+
+net use M: \\demostorage1898.file.core.windows.net\on-prem-data /user:localhost\demostorage1898 YOUR_KEY /persistent:yes 
+
+
+to see all mapped driver 
+
+->net use
+
+to delete 
+ net use M: /delete
+net use * /delete /y

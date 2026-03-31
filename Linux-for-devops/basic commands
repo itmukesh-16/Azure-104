@@ -1,0 +1,156 @@
+create a ubantu vm on azure then assign a public ip 
+open powershell
+
+login through ssh (22) public ip on powershell:
+
+for login -
+
+ssh LinuxAdmin@4.188.67.140
+
+user -LinuxAdmin
+password -LinuxAdmin16
+
+logout :
+exit 
+
+impotant topics:
+
+file system
+user and group management
+proces management
+management 
+io management 
+networking 
+
+
+file system 
+------------------
+
+/-root directory 
+
+ls 
+ls -l 
+ls -ltr
+ls -a ->hidden file 
+
+mkdir folderName:
+rmdir folderName :
+only applicable for directory . 
+
+touch filename.txt -
+to create a file 
+
+rm  filename.txt 
+rm -r file/foldername - to remove reccurssively /to delete all folder and files inside it .
+
+cat filename.txt -
+to open the file
+
+echo "hello friend" > myfile.txt -
+
+myfile.txt will create with content hellow friend 
+
+echo "hellow world" - hello world 
+
+zcat - it will open a zip file :
+
+head filename - first ten line 
+tail filename - last ten line
+
+tail -f filename -this will continue show the last updated line 
+
+pwd -present working direcory 
+
+cd - change directry 
+cd .. - previous directry 
+
+cp copiedfile  destinationfile
+cp -r copiedfile destinationfile  - it will move file along with all the files inside it 
+
+
+mv movingfile  destinationfile
+mv -r monging destinationfile 
+
+* if there are two folder f1, f2 .in folder f2 it has myfile.txt and you want to move it to f1 then 
+
+/home/LocalAdmin:/f2 ~$ mv myfile.txt ../
+
+to rename a folder -
+
+mv oldfoldername/   newfoldername
+
+=================================================
+Ctrl + S → pauses output (looks like terminal is stuck)
+Ctrl + Q → resumes output
+=========================================================
+echo "my new file" >filename.txt
+
+wc filename - 1 3 12 myfile.txt
+
+1-number of lines
+2 - word count 
+12 bytes
+
+wc [f1] [f2] [f3]
+
+cut -b 1-4 filename.txt - this will cut this part and show as a out put 
+
+tee - to show output and store the output into a file simulteneously
+
+echo "hello" | tee hello.txt
+ 
+
+hard link - its a shotcut of a path , which will remain after the original file is deleted 
+
+$ ln  [original filename] [link name] 
+
+soft link - its a shotcut for path , which will remove if the original file deleted
+
+$ ln -s [original filename] [link name] 
+
+
+diff [f1.txt] [f2.txt] - tells the difference b/n files 
+
+
+vi /vim - editor 
+
+vi filename 
+i- insert
+esc - exit the edit mode
+:wq - close the vi
+
+sort - sort file alphanumerically 
+
+
+disk usage :
+df 
+df-h
+
+memory usage :
+free 
+free -h
+
+vmstat - ram usage 
+
+vmstat -a
+
+folder details :
+du
+du .
+
+process :
+
+top - list all the running process 
+ps - tell on which process our bash is running 
+
+fuser - it tell on which filesystem it is running 
+
+kill -9 PrcessId - to kill process.q
+
+
+nohup - it will store the log into file 
+nohup filename.txt
+
+nohup free -h  - this will append the log into nohip.out file 
+head -n 5 nohup - this will show the first 5 lines from nohup.out file 
+

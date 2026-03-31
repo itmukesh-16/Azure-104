@@ -1,0 +1,20 @@
+ 
+1 .
+
+to record all the commands in powershell 
+
+=> Start-Transcript -Path "C:\Logs\session-log.txt"
+
+to stop recording 
+
+=> Stop-Transcript 
+
+2 .to store all the command (not the output) we gave to powershell we use 
+
+=>Get-History | Out-File C:\Logs\commands.txt
+
+
+3 . to log automatically 
+
+=> notepad $PROFILE 
+=>Start-Transcript -Path "C:\Logs\PS-$(Get-Date -Format yyyy-MM-dd_HH-mm-ss).txt"
