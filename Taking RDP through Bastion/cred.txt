@@ -24,10 +24,10 @@ LocalVm2Admin
 
 AutomaticByPlatform
 
-Vm1-1Admin
-LocalVm1-1Admin
 
-
+Web-app server
+itsmukeshgouda -user
+itsmukeshgouda@16-passwod
 
 net use M: \\demostorage1898.file.core.windows.net\on-prem-data /user:localhost\demostorage1898 VB9lW7o2mi0KhAo++Fjv+W+/f0LWl22Ceg4ZES8VkrjuTKnU7gRf8GEg9Pl/sZiAmilel16qdeHV+AStXyey1Q== /persistent:yes
 
